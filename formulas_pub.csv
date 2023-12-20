@@ -1,0 +1,97 @@
+,Variable,Expression,Description,Units
+1,$t_{m}$,$t_{d} \cdot \frac{12}{365}$,Converts units of time from days to months,mo
+2,$T$,$\overline{T} + T_{\sigma}\sin(2\pi \frac{t_{d}}{365} + t_{peak})$,Creates temperature curve for the year,C
+3,$I$,$\overline{I} + I_{\sigma}\sin(2\pi \frac{t_{d}}{365} + t_{peak})$,NA,NA
+4,$NA$,$NA$,NA,NA
+5,$B_{N}$,$\sum_{i=1}^{A_{foul}} \bm{S}$,Defines age classes before fouling starts,tonnes
+6,$B_{F}$,$\sum_{i=1}^{A_{sen}} \bm{S}$,Defines age classes after fouling starts,tonnes
+7,$B_{S}$,$\sum_{i=1}^{t_{\Omega}} \bm{S}$,Defines age classes after senescence,tonnes
+8,$\overline{A}$,$\frac{\sum_{i=1}^{\Omega} i\bm{S}_{i}}{\sum_{i=1}^{\Omega} \bm{S}_{i}}$,Calculates mean age of all biomass,days
+9,$B$,$B_{N} + B_{F} + B_{S}$,Total biomass amount,tonnes
+10,$SA$,$B(1-w_{c})\frac{1}{\alpha}$,Converts biomass to surface area,dm
+11,$N_{f}$,$B\lambda$,Converts biomass to nitrogen content,???
+12,$V_{c}$,$V_{0}(1-\hat{v}_{l}CC_{B})$,Adjusts current velocity based on amount of current biomass,m/s
+13,$1740*\frac{\frac{N_{f}}{A_{farm}}}{Num_{fronds}}^{1.047}$,$NA$,NA,NA
+14,$CC_{B}$,$NA$,Current existing proportion of carrying capacity,dimensionless
+15,$NA$,$NA$,NA,???
+16,$NA$,$NA$,NA,???
+17,$NA$,$NA$,NA,???
+18,$L_{T}$,$\exp\left[-2\cdot 3\left(\frac{T-T_{opt}}{T_{max}-T_{min}}\right)^2\right]$,## Temperature limitation multiplier; Martins&Marques2002,dimensionless
+19,$NA$,$NA$,NA,NA
+20,$NA$,$NA$,NA,dimensionless
+21,$NA$,$NA$,"descriptor, not integral to model",dimensionless
+22,$Growth$,$\mu L_{T}L_{I}B(1-CC_{B})$,NA,tonnes/day
+23,$NA$,$NA$,NA,NA
+24,$\bm{H}$,"$\{h_{1},h_{2},\dotso,h_{\Omega}\}$",NA,dimensionless
+25,$H_{f}$,$\frac{365}{H_{f}}$,NA,days
+26,$w(t_{m}) =$,$NA$,NA,dimensionless
+27,$B_{0}$,"$\begin{cases}
+      b_{0}w(t_{m}), & \text{if}\ B\leq1 \\
+      0, & \text{if}\ B >1
+    \end{cases}$",NA,tonnes
+28,$NA$,$NA$,NA,NA
+29,$\bm{H}$,$w(t_{m}+1)H_{t_{m}}$,NA,dimensionless
+30,$H_{A}$,$Bh_{t}$,NA,tonnes
+31,$g_{A}$,$Eg_{f}$,NA,dimensionless
+32,$L$,"$\begin{cases}
+      g_{A} + h_{t}, & \text{if}\ g_{A} + h_{t}<1 \\
+      1, & \text{if}\ g_{A} + h_{t} \geq1
+    \end{cases}$",NA,dimensionless
+33,$NA$,$NA$,NA,NA
+34,$Tr_{H}$,$\lceil H_{A}/H_{C}\rceil$,NA,trips
+35,$Tr$,$Tr_{H} + Tr_{M}$,NA,trips
+36,$NA$,$NA$,NA,NA
+37,$g(V_{c})$,$NA$,NA,NA
+38,$L_{E} =g(V_{c}) \hat{L_{E}}$,$NA$,"## as current velocity increases, so does erosion",dimensionless
+39,$NA$,$NA$,##a vector whose inverse represents what is removed. when multiplied by biomass it is what stays.,dimensionless
+40,$NA$,$NA$,NA,biodiversity units
+41,$NA$,$NA$,NA,NA
+42,$NA$,$NA$,NA,NA
+43,$NA$,$NA$,NA,NA
+44,$NA$,$NA$,NA,NA
+45,$NA$,$NA$,NA,NA
+46,$P_{Fe}$,$Pr_{Fe}H_{A}(1-w_{c})$,NA,tonnes
+47,$P_{Fo}$,$Pr_{Fo}H_{A}(1-w_{c})$,NA,tonnes
+48,$NA$,$NA$,NA,tonnes
+49,$P_{Fu}$,$\gamma Pr_{Fu}H_{A}(1-w_{c})$,NA,tonnes??
+50,$R_{Fe}$,$\rho_{Fe}P_{Fe}$,NA,dollars
+51,$R_{Fo}$,$\rho_{Fo}P_{Fo}$,NA,dollars
+52,$R_{Fu}$,$\rho_{Fu}P_{Fu}$,NA,dollars
+53,$NA$,$NA$,NA,tonnes??
+54,$NA$,$NA$,NA,dollars
+55,$NA$,$NA$,NA,dollars
+56,$NA$,$NA$,NA,dollars
+57,$NA$,$NA$,NA,NA
+58,$NA$,$NA$,NA,tonnes/day
+59,$NA$,$NA$,NA,tonnes/day
+60,$NA$,$NA$,NA,tonnes CO2e
+61,$NA$,$NA$,NA,tonnes CO2e
+62,$NA$,$NA$,NA,tonnes CO2e
+63,$Pr_{C}$,$1 - (Pr_{Fo} + Pr_{Fe} + Pr_{Fu})$,NA,dimensionless
+64,$CO_{2}e_{H}$,$H_{A}Pr_{C}(1-w_{c})C_{f}$,NA,tonnes CO2e
+65,$C_{B}$,$CO_{2}e_{L} + CO_{2}e_{H} +  CO_{2}e_{CH_{4}}$,NA,tonnes CO2e
+66,$NA$,$NA$,NA,tonnes CO2e
+67,$R_{C}$,$\rho_{C}(C_{B} - C_{L})$,NA,dollars
+68,$R$,$R_{Fo} + R_{Fe} + R_{Fu} + R_{C}$,NA,dollars
+69,$NA$,$NA$,NA,NA
+70,$NA$,$NA$,NA,NA
+71,$NA$,$NA$,NA,NA
+72,$NA$,$NA$,NA,NA
+73,$NA$,$NA$,NA,NA
+74,$NA$,$NA$,NA,NA
+75,$NA$,$NA$,NA,NA
+76,$NA$,$NA$,NA,NA
+77,$NA$,$NA$,NA,NA
+78,$NA$,$NA$,NA,NA
+79,$NA$,$NA$,NA,NA
+80,$NA$,$NA$,NA,NA
+81,$NA$,$NA$,NA,NA
+82,$NA$,$NA$,NA,NA
+83,$NA$,$NA$,NA,NA
+84,$NA$,$NA$,NA,NA
+85,$NA$,$NA$,NA,NA
+86,$NA$,$NA$,NA,NA
+87,$NA$,$NA$,NA,NA
+88,$NA$,$NA$,NA,NA
+89,$NA$,$NA$,NA,NA
+90,$NA$,$NA$,NA,NA

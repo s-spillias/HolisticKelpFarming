@@ -1,0 +1,26 @@
+#!/bin/bash
+# Job Account string
+#PBS -A UQ-SCI-SEES
+# Job Resources
+#PBS -l select=1:ncpus=1:ompthreads=1:mem=20GB
+# Job Walltime
+#PBS -l walltime=00:30:00
+# Job Name
+#PBS -N snf_model
+#PBS -J 1-4
+
+#shopt -s expand_aliases
+
+module load R/4.1.0+nsga2R
+
+export LANG=C
+
+cd $PBS_O_WORKDIR
+
+cp -rp $PBS_O_WORKDIR $TMPDIR
+
+export SINGULARITYENV_TMPDIR=$TMPDIR
+
+echo "cd $TMPDIR/SnFProject; Rscript Code/4_SnF_HPC.R" | shell
+
+cp -rp $TMPDIR/SnFProject/Output $PBS_O_WORKDIR

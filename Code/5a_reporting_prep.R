@@ -1,0 +1,40 @@
+
+
+
+pubnames <- c("Food (t)",
+              "Habitat Quality (1)",
+              "Carbon (1 kt CO2e)",
+              "Income (million AUD)",
+              "Standing Biomass (t)",
+              "Erosion (kg/d)",
+              "Carbon Harvest (t)",
+              "Feed Harvest (t)",
+              "Food Produced (kt)",
+              "Cost (1000 AUD)",
+              "Revenue (1000 AUD)",
+              "Emissions (kg CO2e)")
+
+var_names <- c("Food_Production",
+               "sBiodiversity_Benefit",
+               "sCO2e_Mitigation",
+               "sProfit",
+               "Dry_Biomass",
+               "Loss_Erosion",
+               "Carbon_Manual_Seq",
+               "Feed_Production",
+               "sFood",
+               "Cost",
+               "Revenue",
+               "Carbon_Loss")
+unit_mod <- c(1000,
+              1,
+              1000000,
+              1000000,
+              1000,
+              1,
+              1000,
+              1000,
+              1000000,
+              1000,
+              1000,
+              1 ) %>% setNames(var_names)
